@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Fix the bug",
+    "type": "string",
+    "action": "The following code has a bug. Fix it."
+  },
+  {
+    "name": "Rewrite the code",
+    "type": "string",
+    "action": "Rewrite the code to improve readability and maintainability."
+  },
+  {
+    "name": "Summarize the text",
+    "type": "string",
+    "action": "Write a short summary of the text."
+  },
+  {
+    "name": "Main points",
+    "type": "string",
+    "action": "Give the main points highlighted in the text."
+  },
+  {
+    "name": "Analyze Sentiment",
+    "type": "string",
+    "action": "Analyze the sentiment of the text."
+  },
+  {
+    "name": "Extract Keywords",
+    "type": "string",
+    "action": "Extract the main keywords from the text."
+  },
+  {
+    "name": "Identify Entities",
+    "type": "string",
+    "action": "Identify the named entities mentioned in the text."
+  },
+  {
+    "name": "Translate text into spanish",
+    "type": "string",
+    "action": "Translate the text into spanish."
+  },
+  {
+    "name": "Translate text into english",
+    "type": "string",
+    "action": "Traduzca el texto al inglés."
+  },
+  {
+    "name": "Paraphrase",
+    "type": "string",
+    "action": "Rewrite the text in a different way while keeping the same meaning."
+  },
+  {
+    "name": "Check Grammar",
+    "type": "string",
+    "action": "Check the text for grammatical errors."
+  },
+  {
+    "name": "Summarize & Synthesize",
+    "type": "string",
+    "action": "Summarize multiple texts and synthesize the information into a single coherent text."
+  }
+]
