@@ -223,7 +223,7 @@ void drawGUI()
     for (std::size_t index = 0; index < localOutputs.size(); ++index)
     {
         ImGui::SetNextWindowPos(ImVec2(100, 100), ImGuiCond_FirstUseEver);
-        ImGui::SetNextWindowSize(ImVec2(800, 600), ImGuiCond_FirstUseEver);
+        ImGui::SetNextWindowSize(ImVec2(400, 600), ImGuiCond_FirstUseEver);
         // do not dock to the viewport
         std::string windowName = "Output " + std::to_string(index);
         if (ImGui::Begin(windowName.c_str(), nullptr, ImGuiWindowFlags_NoDocking | ImGuiWindowFlags_NoCollapse))
@@ -242,12 +242,16 @@ void drawGUI()
             }
             // Copy button
             ImGui::SameLine();
-            if (ImGui::Button("Copy anwser"))
+            if (ImGui::Button("Copy answer"))
             {
                 clip::set_text(localOutputs[index]->output);
             }
-            std::string title = "**" + localOutputs[index]->prompt + "**";
-            ImGuiMd::RenderUnindented(title.c_str());
+            std::string inputContainer = windowName + " prompt";
+            if (ImGui::BeginChild(inputContainer.c_str(), ImVec2(0, 100), true))
+            {
+                ImGuiMd::Render("**" + localOutputs[index]->prompt + "**");
+                ImGui::EndChild();
+            }
             std::string outputContainer = windowName + " output";
             if (ImGui::BeginChild(outputContainer.c_str(), ImVec2(0, 0), true))
             {
